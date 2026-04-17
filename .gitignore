@@ -5,4 +5,4 @@ scaff/*
 *.txt
 angr-env/*
 *.so
-
+.gdb*
