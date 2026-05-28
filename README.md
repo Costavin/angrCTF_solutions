@@ -10,6 +10,5 @@ To me, the most efficient way to install angr is under a virtual environment, as
 $ python3 -m venv angr_playground
 $ source angr_playground/bin/activate
 $ pip install angr
-
 `
 
