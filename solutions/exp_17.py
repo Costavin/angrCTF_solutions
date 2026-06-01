@@ -5,10 +5,11 @@ import sys
 def main():
     path = "./17_angr_arbitrary_jump"
     project = angr.Project(path, auto_load_libs=False)#, use_sim_procedures=False)
-    input_len = 100
+    input_len = 48 + 8
     #symbolic_input =  claripy.BVS("input", 8*input_len)
     #stdin_=angr.SimFileStream(name='stdin', content=symbolic_input, has_end=False) 
     initial_state = project.factory.entry_state(
+            #stdin=symbolic_input,
             add_options={
                 angr.options.SYMBOL_FILL_UNCONSTRAINED_MEMORY,
                 angr.options.SYMBOL_FILL_UNCONSTRAINED_REGISTERS
